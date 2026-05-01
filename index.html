@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Leonardo Moreira — Desenvolvedor Power Platform & Analista de Processos. Transformando processos manuais em soluções digitais escaláveis." />
+    <meta name="author" content="Leonardo Moreira Rocha Alves" />
+    <meta name="theme-color" content="#0a0e1a" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Leonardo Moreira — Portfólio" />
+    <meta property="og:description" content="Desenvolvedor Power Platform & Analista de Processos" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <title>Leonardo Moreira — Power Platform & Processos</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+        <a href="#top" class="nav__brand" aria-label="Início">
+            <span class="nav__logo">L</span>
+            <span class="nav__name">Leonardo<span>.</span>Moreira</span>
+        </a>
+        <nav class="nav__links" aria-label="Navegação principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#cases">Cases</a>
+            <a href="#stack">Stack</a>
+            <a href="#trajetoria">Trajetória</a>
+            <a href="#contato" class="nav__cta">Contato</a>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content reveal">
+                    <span class="hero__eyebrow">
+                        <span class="dot"></span> Disponível para projetos
+                    </span>
+                    <h1 class="hero__title">
+                        Transformo <span class="grad">processos manuais</span><br />
+                        em soluções <span class="grad-2">digitais escaláveis</span>.
+                    </h1>
+                    <p class="hero__lead">
+                        Sou <strong>Leonardo Moreira</strong> — Desenvolvedor Power Platform e Analista de Processos.
+                        Atuo na intersecção entre engenharia industrial, dados e low-code para resolver gargalos
+                        operacionais com impacto mensurável.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#cases" class="btn btn--primary">
+                            Ver projetos
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#contato" class="btn btn--ghost">Entrar em contato</a>
+                    </div>
+                    <div class="hero__chips">
+                        <span class="chip">Power Apps</span>
+                        <span class="chip">Power Automate</span>
+                        <span class="chip">Power BI</span>
+                        <span class="chip">SharePoint</span>
+                        <span class="chip">SAP PM</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="hero__visual reveal" data-delay="120">
+                    <div class="profile">
+                        <div class="profile__ring"></div>
+                        <div class="profile__photo">
+                            <img src="assets/foto-perfil.jpg" alt="Leonardo Moreira" loading="eager" />
+                        </div>
+                        <div class="profile__badge profile__badge--top">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+                            <div>
+                                <strong>+5.000</strong>
+                                <span>solicitações processadas</span>
+                            </div>
+                        </div>
+                        <div class="profile__badge profile__badge--bottom">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                            <div>
+                                <strong>4 unidades</strong>
+                                <span>fabris atendidas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+                <span></span>
+            </a>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="section" id="sobre">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">01 / Sobre</span>
+                    <h2 class="section__title">Onde a engenharia<br /> encontra o low-code.</h2>
+                </div>
+                <div class="about">
+                    <div class="about__text reveal">
+                        <p>
+                            Profissional com forte atuação no setor farmacêutico (<strong>Aché Laboratórios</strong>),
+                            especializado na área de <strong>Engenharia e Controle de Manutenção (ECM)</strong>.
+                            Meu foco não é apenas desenvolver software, mas usar a tecnologia para resolver
+                            gargalos operacionais reais.
+                        </p>
+                        <p>
+                            Substituí planilhas manuais por aplicativos integrados, implementei KPIs em tempo real
+                            (MTTR, TMP, TMR) e padronizei fluxos de trabalho em múltiplas plantas, gerando ganhos
+                            mensuráveis no ciclo de compra e na disponibilidade de materiais.
+                        </p>
+                        <p class="about__highlight">
+                            Combino visão de processo, fundamentação code-first (HTML, CSS, JS, Python) e
+                            domínio do ecossistema Microsoft Power Platform para entregar soluções end-to-end.
+                        </p>
+                    </div>
+                    <div class="about__pillars">
+                        <article class="pillar reveal" data-delay="0">
+                            <div class="pillar__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1A1.7 1.7 0 0 0 10 3.1V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+                            </div>
+                            <h3>Foco</h3>
+                            <p>Transformação de processos manuais e planilhas em ecossistemas digitais.</p>
+                        </article>
+                        <article class="pillar reveal" data-delay="80">
+                            <div class="pillar__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l5-4 5 4v13M9 21v-6h4v6"/></svg>
+                            </div>
+                            <h3>Impacto</h3>
+                            <p>Soluções em produção em 4 unidades fabris da Aché Laboratórios.</p>
+                        </article>
+                        <article class="pillar reveal" data-delay="160">
+                            <div class="pillar__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
+                            </div>
+                            <h3>Volume</h3>
+                            <p>Mais de 5.000 solicitações processadas via apps desenvolvidos por mim.</p>
+                        </article>
+                        <article class="pillar reveal" data-delay="240">
+                            <div class="pillar__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+                            </div>
+                            <h3>Estratégia</h3>
+                            <p>Implementação de KPIs em tempo real (MTTR, TMP, TMR) com visão analítica.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACTO -->
+        <section class="section section--alt" id="impacto">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">02 / Impacto</span>
+                    <h2 class="section__title">Resultados estratégicos<br /> no Aché Laboratórios.</h2>
+                    <p class="section__sub">Números diretos da implementação do ecossistema Power Platform.</p>
+                </div>
+                <div class="metrics">
+                    <article class="metric reveal">
+                        <div class="metric__value" data-count="4">0</div>
+                        <h3>Unidades fabris</h3>
+                        <p>Apps padronizados em todas as filiais.</p>
+                    </article>
+                    <article class="metric reveal" data-delay="80">
+                        <div class="metric__value" data-count="5000" data-suffix="+">0</div>
+                        <h3>Solicitações</h3>
+                        <p>Processos automatizados via Power Apps.</p>
+                    </article>
+                    <article class="metric reveal" data-delay="160">
+                        <div class="metric__value" data-count="0">0</div>
+                        <h3>Planilhas manuais</h3>
+                        <p>Eliminação de controles descentralizados.</p>
+                    </article>
+                    <article class="metric reveal" data-delay="240">
+                        <div class="metric__value metric__value--text">KPIs</div>
+                        <h3>Tempo real</h3>
+                        <p>Monitoramento de MTTR, TMP e TMR.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASES -->
+        <section class="section" id="cases">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">03 / Cases</span>
+                    <h2 class="section__title">Do problema<br /> à solução em produção.</h2>
+                    <p class="section__sub">Três cases que demonstram o ciclo completo: análise, prototipação, desenvolvimento e melhoria contínua.</p>
+                </div>
+                <div class="cases">
+                    <article class="case reveal">
+                        <header class="case__header">
+                            <span class="case__num">01</span>
+                            <span class="case__tag">Power Platform · SAP PM</span>
+                        </header>
+                        <h3>Gestão Centralizada de Compras e Serviços</h3>
+                        <p class="case__desc">
+                            Centralização de pedidos internos que ocorriam de forma dispersa entre planilhas
+                            e e-mails. App em Power Apps integrado ao SharePoint, com fluxos de aprovação no
+                            Power Automate e ponte para o módulo PM do SAP.
+                        </p>
+                        <ul class="case__stack">
+                            <li>Power Apps <span>Front</span></li>
+                            <li>SharePoint <span>Data</span></li>
+                            <li>Power Automate <span>Flows</span></li>
+                            <li>SAP PM <span>Integração</span></li>
+                        </ul>
+                        <div class="case__result">
+                            <strong>+4.000</strong> solicitações processadas · TMP definido como métrica de melhoria contínua.
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-delay="100">
+                        <header class="case__header">
+                            <span class="case__num">02</span>
+                            <span class="case__tag">UX · Validação de Dados</span>
+                        </header>
+                        <h3>Cadastro Inteligente de Materiais</h3>
+                        <p class="case__desc">
+                            Inconsistências no preenchimento e lentidão no registro de novos materiais comprometiam
+                            o catálogo. Desenvolvi um app com formulários inteligentes, validação na entrada
+                            e integração nativa com o sistema de solicitações.
+                        </p>
+                        <ul class="case__stack">
+                            <li>Power Apps <span>UI</span></li>
+                            <li>Validações <span>Lógica</span></li>
+                            <li>SharePoint <span>Catálogo</span></li>
+                        </ul>
+                        <div class="case__result">
+                            Redução drástica de erros e aceleração do <strong>TMR</strong> (Tempo Médio de Registro).
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-delay="200">
+                        <header class="case__header">
+                            <span class="case__num">03</span>
+                            <span class="case__tag">MRO · Automação</span>
+                        </header>
+                        <h3>Controle de Estoque MRO e Automação</h3>
+                        <p class="case__desc">
+                            Eliminação de planilhas dispersas no almoxarifado: gestão de movimentação,
+                            recebimento e retiradas em uma única interface. Alertas automáticos de escassez
+                            disparam reposição com um toque.
+                        </p>
+                        <ul class="case__stack">
+                            <li>Power Apps <span>Mobile</span></li>
+                            <li>Power Automate <span>Alertas</span></li>
+                            <li>Power BI <span>KPIs</span></li>
+                        </ul>
+                        <div class="case__result">
+                            Redução da indisponibilidade de materiais · controle fiscal e interno automatizado.
+                        </div>
+                    </article>
+                </div>
+
+                <div class="method reveal">
+                    <h3 class="method__title">Metodologia de trabalho</h3>
+                    <ol class="method__steps">
+                        <li>
+                            <span>01</span>
+                            <strong>Análise &amp; Mapeamento</strong>
+                            <p>Ishikawa, 5W2H, fluxogramas.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <strong>Prototipação</strong>
+                            <p>Figma, Trello, dbdiagram.</p>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <strong>Desenvolvimento</strong>
+                            <p>Power Platform, documentação técnica.</p>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <strong>Melhoria contínua</strong>
+                            <p>Ciclo PDCA, monitoramento de KPIs.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section class="section section--alt" id="stack">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">04 / Stack</span>
+                    <h2 class="section__title">Ferramentas que<br /> ligam dado a decisão.</h2>
+                </div>
+
+                <div class="stack">
+                    <article class="stack__group reveal">
+                        <h3>Power Platform</h3>
+                        <ul>
+                            <li><span class="dotc dotc--p"></span> Power Apps <em>(Canvas / Model-driven)</em></li>
+                            <li><span class="dotc dotc--p"></span> Power Automate <em>(Cloud Flows)</em></li>
+                            <li><span class="dotc dotc--p"></span> Power BI <em>(DAX / Modelagem)</em></li>
+                            <li><span class="dotc dotc--p"></span> SharePoint &amp; Dataverse</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack__group reveal" data-delay="80">
+                        <h3>Linguagens &amp; Code</h3>
+                        <ul>
+                            <li><span class="dotc dotc--c"></span> Python &amp; JavaScript</li>
+                            <li><span class="dotc dotc--c"></span> VBA &amp; DAX</li>
+                            <li><span class="dotc dotc--c"></span> HTML, CSS &amp; React</li>
+                            <li><span class="dotc dotc--c"></span> SQL &amp; ETL</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack__group reveal" data-delay="160">
+                        <h3>Qualidade &amp; Processos</h3>
+                        <ul>
+                            <li><span class="dotc dotc--y"></span> PDCA, Ishikawa, 5S</li>
+                            <li><span class="dotc dotc--y"></span> KPIs (MTTR, TMP, TMR)</li>
+                            <li><span class="dotc dotc--y"></span> Mapeamento de processos</li>
+                            <li><span class="dotc dotc--y"></span> Metodologias ágeis · Kanban</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack__group reveal" data-delay="240">
+                        <h3>UI / UX &amp; Design</h3>
+                        <ul>
+                            <li><span class="dotc dotc--g"></span> Figma · Prototipação</li>
+                            <li><span class="dotc dotc--g"></span> Adobe Photoshop · Illustrator</li>
+                            <li><span class="dotc dotc--g"></span> Premiere · Edição audiovisual</li>
+                            <li><span class="dotc dotc--g"></span> Blender · Modelagem 3D</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <pre class="codeblock reveal" aria-hidden="true"><code><span class="t-c">// philosophy.js</span>
+<span class="t-k">const</span> <span class="t-v">leonardo</span> = {
+  <span class="t-p">foco</span>: <span class="t-s">"engenharia + low-code + dados"</span>,
+  <span class="t-p">stack</span>: [<span class="t-s">"Power Platform"</span>, <span class="t-s">"JS"</span>, <span class="t-s">"Python"</span>, <span class="t-s">"SQL"</span>],
+  <span class="t-p">resolver</span>: (<span class="t-v">processo</span>) =&gt; <span class="t-v">processo</span>
+    .<span class="t-f">mapear</span>()
+    .<span class="t-f">automatizar</span>()
+    .<span class="t-f">medir</span>(<span class="t-s">"MTTR"</span>, <span class="t-s">"TMP"</span>, <span class="t-s">"TMR"</span>)
+    .<span class="t-f">iterar</span>(),
+};</code></pre>
+            </div>
+        </section>
+
+        <!-- TRAJETÓRIA -->
+        <section class="section" id="trajetoria">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">05 / Trajetória</span>
+                    <h2 class="section__title">Trajetória &amp; formação.</h2>
+                </div>
+
+                <ol class="timeline">
+                    <li class="timeline__item reveal">
+                        <span class="timeline__date">Jun/2024 — Atual</span>
+                        <h3>Assistente Administrativo · Engenharia</h3>
+                        <span class="timeline__org">Aché Laboratórios</span>
+                        <p>Promoção interna após o programa de aprendizado. Atuação em desenvolvimento de soluções
+                        Power Platform, automações em nuvem, dashboards de KPIs e interface com o módulo PM do SAP.</p>
+                        <ul class="timeline__tags">
+                            <li>Power Apps</li><li>Power Automate</li><li>Power BI</li><li>SAP PM</li>
+                        </ul>
+                    </li>
+                    <li class="timeline__item reveal" data-delay="80">
+                        <span class="timeline__date">Fev/2023 — Jun/2024</span>
+                        <h3>Aprendiz Administrativo · Engenharia</h3>
+                        <span class="timeline__org">Aché Laboratórios</span>
+                        <p>Foco em rotinas de MRO e ECM: almoxarifado, controle de estoque, recebimento de materiais
+                        e suporte a fornecedores. Primeiros projetos de digitalização de planilhas.</p>
+                    </li>
+                    <li class="timeline__item reveal" data-delay="160">
+                        <span class="timeline__date">Dez/2025 (previsão)</span>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <span class="timeline__org">Centro Universitário ENIAC</span>
+                        <p>Graduação tecnológica em andamento, com ênfase em estrutura de dados, banco de dados e
+                        engenharia de software.</p>
+                    </li>
+                    <li class="timeline__item reveal" data-delay="240">
+                        <span class="timeline__date">Jun/2024</span>
+                        <h3>Técnico em Controle de Qualidade</h3>
+                        <span class="timeline__org">SENAI</span>
+                        <p>Formação técnica com foco em ferramentas de qualidade, estatística aplicada e
+                        gestão de processos industriais.</p>
+                    </li>
+                    <li class="timeline__item reveal" data-delay="320">
+                        <span class="timeline__date">2023 — 2024</span>
+                        <h3>Certificações Alura</h3>
+                        <span class="timeline__org">Front-end &amp; Programação</span>
+                        <p>JavaScript (tipos, variáveis, funções), HTML &amp; CSS (responsividade mobile-first),
+                        práticas e ambientes de desenvolvimento.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section section--cta" id="contato">
+            <div class="container">
+                <div class="cta reveal">
+                    <span class="section__eyebrow">06 / Contato</span>
+                    <h2 class="cta__title">Vamos transformar<br /> seus processos?</h2>
+                    <p class="cta__lead">
+                        Disponível para projetos full-time e freelance. Pronto para aplicar visão de
+                        engenharia e técnica de desenvolvimento no seu negócio.
+                    </p>
+
+                    <div class="cta__actions">
+                        <a href="mailto:leomrocha9@gmail.com" class="btn btn--primary btn--lg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                            leomrocha9@gmail.com
+                        </a>
+                        <a href="https://wa.me/5511957696134" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L3 21l2.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                            +55 11 95769-6134
+                        </a>
+                    </div>
+
+                    <ul class="socials">
+                        <li>
+                            <a href="https://www.linkedin.com/in/leonardo-moreira18/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.65 0h4.37v1.91h.06c.61-1.16 2.1-2.39 4.32-2.39 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V22H7.87V8z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/leomoreira1" target="_blank" rel="noopener" aria-label="Behance">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5.5h7V7zM11.28 12.36c1.04-.5 1.6-1.34 1.6-2.5 0-2.3-1.7-2.86-3.7-2.86H2v12h7.4c2.13 0 4.13-1.04 4.13-3.43 0-1.5-.7-2.6-2.25-3.21zM5 9.4h2.9c.93 0 1.66.27 1.66 1.32 0 .97-.66 1.36-1.56 1.36H5V9.4zm3.13 8.2H5v-3.4h3.2c1.13 0 1.85.47 1.85 1.66 0 1.2-.85 1.74-1.92 1.74zM22 14.66c0-2.66-1.55-4.86-4.36-4.86-2.74 0-4.6 2.07-4.6 4.78 0 2.81 1.77 4.74 4.6 4.74 2.16 0 3.55-.97 4.21-3.04h-2.32c-.24.74-1.02.96-1.78.96-1.46 0-2.22-.86-2.22-2.31H22v-.27zm-6.45-1.36c.07-1.2.86-1.95 2.04-1.95 1.25 0 1.86.73 1.97 1.95h-4.01z"/></svg>
+                                <span>Behance</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/leoart.z/" target="_blank" rel="noopener" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                                <span>@leoart.z</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>
+                <span class="footer__brand">Leonardo<span>.</span>Moreira</span>
+                <p>Desenvolvedor Power Platform &amp; Analista de Processos · São Paulo, BR</p>
+            </div>
+            <p class="footer__copy">© <span id="year">2026</span> · Construído com HTML, CSS e JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
