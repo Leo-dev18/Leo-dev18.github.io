@@ -3,7 +3,7 @@
 Site one-page da **La Kombine**, cabine fotográfica em Kombi retrô, totem retrô e
 totem moderno para casamentos, festas e eventos corporativos.
 
-🔗 **No ar em:** https://leo-dev18.github.io/LaKombine/
+🔗 **No ar em:** https://leo-dev18.github.io/lakombine/
 📷 **Instagram:** [@la.kombine](https://www.instagram.com/la.kombine)
 
 ---
@@ -145,5 +145,6 @@ Auto-hospedada em `assets/fonts/` (SIL Open Font License). Nada é buscado no Go
 
 ## Deploy
 
-Hospedado no GitHub Pages a partir do branch `main`, pasta `/ (root)`.
+Servido pelo GitHub Pages a partir do branch `main` do repositório `Leo-dev18.github.io`,
+na subpasta `lakombine/`.
 Qualquer push no `main` publica em ~1 minuto.
