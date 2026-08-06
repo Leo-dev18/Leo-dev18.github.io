@@ -3,7 +3,7 @@
 Site one-page da **La Kombine**, cabine fotográfica em Kombi retrô, totem retrô e
 totem moderno para casamentos, festas e eventos corporativos.
 
-🔗 **No ar em:** https://leo-dev18.github.io/lakombine/
+🔗 **No ar em:** https://lakombine.com.br/
 📷 **Instagram:** [@la.kombine](https://www.instagram.com/la.kombine)
 
 ---
@@ -143,8 +143,56 @@ Auto-hospedada em `assets/fonts/` (SIL Open Font License). Nada é buscado no Go
 - HTML semântico (`header`/`main`/`section`/`article`/`footer`) e dados estruturados
   `LocalBusiness` para o Google
 
-## Deploy
+## SEO
 
-Servido pelo GitHub Pages a partir do branch `main` do repositório `Leo-dev18.github.io`,
-na subpasta `lakombine/`.
-Qualquer push no `main` publica em ~1 minuto.
+- `<title>` e meta description com serviço + cidade
+- `canonical`, Open Graph e Twitter Card
+- Dados estruturados `LocalBusiness` (com catálogo das 3 experiências) e `FAQPage`
+  (as 9 perguntas — o texto marcado é idêntico ao visível, como o Google exige)
+- `sitemap.xml` e `robots.txt`
+- Um `<h1>` só, hierarquia limpa de `<h2>`/`<h3>`
+
+**Não** declaramos `aggregateRating`. A nota 5,0 vem do Casamentos.com.br, e marcar
+avaliação de terceiro como se fosse coletada no próprio site viola as diretrizes do
+Google e pode gerar penalidade manual.
+
+## Domínio e deploy
+
+O domínio é **lakombine.com.br** (registrado no Registro.br). O arquivo `CNAME` na raiz
+deste repositório é o que informa isso ao GitHub Pages.
+
+> ⚠️ O `CNAME` só tem efeito na **raiz da fonte de publicação**. Enquanto o site estiver
+> como subpasta de outro repositório, ele é ignorado — o domínio exige que este projeto
+> esteja em um repositório próprio.
+
+### DNS no Registro.br
+
+No painel do Registro.br → **Editar zona DNS**:
+
+| Tipo | Nome | Valor |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `leo-dev18.github.io.` |
+
+Configurando apex e `www` juntos, o GitHub cria o redirecionamento entre os dois
+automaticamente.
+
+### No GitHub
+
+**Settings → Pages** → Custom domain: `lakombine.com.br` → Save. Espere o check verde e
+então marque **Enforce HTTPS** (o certificado Let's Encrypt sai sozinho; pode levar
+algumas horas).
+
+O DNS propaga em minutos, mas pode levar até 24 h. Para conferir:
+
+```bash
+dig +short lakombine.com.br
+curl -sI https://lakombine.com.br | head -1
+```

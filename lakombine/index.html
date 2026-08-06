@@ -7,15 +7,15 @@
 <meta name="description" content="Cabine fotográfica dentro de uma Kombi retrô, além de totens retrô e modernos. Fotos impressas na hora para casamentos, festas infantis e eventos corporativos em Guarulhos e Grande São Paulo." />
 <meta name="theme-color" content="#4E9488" />
 <meta name="author" content="La Kombine" />
-<link rel="canonical" href="https://leo-dev18.github.io/lakombine/" />
+<link rel="canonical" href="https://lakombine.com.br/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="La Kombine" />
 <meta property="og:title" content="La Kombine — Cabine Fotográfica em Kombi Retrô" />
 <meta property="og:description" content="A festa acontece, a memória sai impressa. Kombi retrô, totem retrô e totem moderno para casamentos, festas e eventos." />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:url" content="https://leo-dev18.github.io/lakombine/" />
-<meta property="og:image" content="https://leo-dev18.github.io/lakombine/assets/og-image.png" />
+<meta property="og:url" content="https://lakombine.com.br/" />
+<meta property="og:image" content="https://lakombine.com.br/assets/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -28,23 +28,67 @@
 <link rel="stylesheet" href="styles/fonts.css" />
 <link rel="stylesheet" href="styles/main.css" />
 
+<!-- Dados estruturados do negócio. O telefone usa o mesmo placeholder dos links
+     do WhatsApp, então o `sed` do README corrige aqui também. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://lakombine.com.br/#negocio",
   "name": "La Kombine",
   "description": "Cabine fotográfica em Kombi retrô, totem retrô e totem moderno para casamentos, festas e eventos corporativos.",
-  "image": "https://leo-dev18.github.io/lakombine/assets/og-image.png",
-  "url": "https://leo-dev18.github.io/lakombine/",
-  "areaServed": "Guarulhos, Grande São Paulo e região",
+  "image": "https://lakombine.com.br/assets/og-image.png",
+  "logo": "https://lakombine.com.br/assets/logo.png",
+  "url": "https://lakombine.com.br/",
+  "telephone": "+5511900000000",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Guarulhos",
     "addressRegion": "SP",
     "addressCountry": "BR"
   },
+  "areaServed": [
+    { "@type": "City", "name": "Guarulhos" },
+    { "@type": "City", "name": "São Paulo" },
+    { "@type": "AdministrativeArea", "name": "Grande São Paulo" }
+  ],
   "sameAs": ["https://www.instagram.com/la.kombine"],
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Experiências",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": {
+        "@type": "Service", "name": "Kombi Retrô",
+        "description": "Cabine fotográfica dentro de uma Kombi retrô, com câmera montada no interior e impressão na hora. Ideal para casamentos, bodas e festas ao ar livre." } },
+      { "@type": "Offer", "itemOffered": {
+        "@type": "Service", "name": "Totem Retrô",
+        "description": "Totem fotográfico com acabamento vintage, impressão em tirinha ou polaroid e molduras personalizadas. Ideal para casamentos em salão, 15 anos e aniversários." } },
+      { "@type": "Offer", "itemOffered": {
+        "@type": "Service", "name": "Totem Moderno",
+        "description": "Totem fotográfico de design minimalista, com layout personalizado conforme o tema da festa ou a marca da empresa. Ideal para festas infantis, formaturas e eventos corporativos." } }
+    ]
+  }
+}
+</script>
+
+<!-- Perguntas frequentes: habilita o resultado expandido do Google.
+     O texto tem de bater com o que está visível na seção #faq da página. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Vocês atendem em quais regiões?", "acceptedAnswer": { "@type": "Answer", "text": "Somos de Guarulhos (SP) e atendemos toda a Grande São Paulo e região. Fazemos deslocamento para outras cidades — o custo varia conforme o local do evento e entra no orçamento." } },
+    { "@type": "Question", "name": "Com quanta antecedência devo reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos pelo menos 3 meses de antecedência, principalmente para casamentos e datas de alta temporada. Mas sempre vale consultar a agenda — de vez em quando abre uma data." } },
+    { "@type": "Question", "name": "Quanto tempo leva a montagem?", "acceptedAnswer": { "@type": "Answer", "text": "Cerca de 60 minutos. Chegamos antes do horário combinado para montar, testar tudo e deixar a experiência pronta antes da chegada dos convidados." } },
+    { "@type": "Question", "name": "Qual é a duração do serviço?", "acceptedAnswer": { "@type": "Answer", "text": "A duração é personalizável — normalmente de 3 a 6 horas de operação. Se a festa render, dá para contratar hora extra, cobrada proporcionalmente." } },
+    { "@type": "Question", "name": "Funciona em ambiente aberto?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Trabalhamos ao ar livre desde que haja um ponto de energia e uma área plana e coberta em caso de chuva. A gente alinha os detalhes técnicos com você e com o espaço antes do evento." } },
+    { "@type": "Question", "name": "As fotos são impressas na hora?", "acceptedAnswer": { "@type": "Answer", "text": "São. Os convidados saem com a foto na mão em poucos segundos, no formato tirinha ou polaroid. Além disso, você recebe todas as imagens em versão digital." } },
+    { "@type": "Question", "name": "Dá para personalizar as molduras e o álbum?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Personalizamos molduras, placas e a capa do livro de assinaturas com os nomes, a data e a identidade visual do evento — inclusive com a marca da empresa em eventos corporativos." } },
+    { "@type": "Question", "name": "Serve para festa infantil e evento corporativo?", "acceptedAnswer": { "@type": "Answer", "text": "Serve muito bem. O Totem Retrô e o Totem Moderno foram pensados justamente para esses públicos: ocupam pouco espaço, são rápidos de operar e o layout é adaptado ao tema da festa ou à marca da empresa." } },
+    { "@type": "Question", "name": "Quais são as formas de pagamento?", "acceptedAnswer": { "@type": "Answer", "text": "Aceitamos transferência bancária, PIX e cartão de crédito, com possibilidade de parcelamento combinado diretamente com você." } }
+  ]
 }
 </script>
 </head>
