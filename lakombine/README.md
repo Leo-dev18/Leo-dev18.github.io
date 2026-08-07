@@ -131,7 +131,9 @@ Auto-hospedada em `assets/fonts/` (SIL Open Font License). Nada é buscado no Go
 
 - **Poppins** — títulos e interface
 - **Inter** — texto corrido
-- **Great Vibes** — os detalhes em manuscrito das seções
+- **Sacramento** — os detalhes em manuscrito. Traço monolinear fino, com altura-x
+  de 0,270 do corpo: por isso roda a `1.92em`, calculado para bater opticamente
+  com a Poppins ao lado. A descendente longa (0,53em) exige a classe `.h2--script`
 
 ## Acessibilidade
 

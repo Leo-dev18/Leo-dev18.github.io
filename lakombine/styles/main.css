@@ -51,7 +51,7 @@
 
   --font-display: 'Poppins', 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  --font-script: 'Great Vibes', 'Snell Roundhand', 'Brush Script MT', cursive;
+  --font-script: 'Sacramento', 'Snell Roundhand', 'Brush Script MT', cursive;
 
   --nav-h: 74px;
   --container: 1200px;
@@ -113,11 +113,20 @@ ul, ol { list-style: none; padding: 0; }
 }
 .h2--light { color: var(--white); }
 
+/* A Sacramento desce 0,53em abaixo da linha de base (a Yellowtail descia 0,30em).
+   A 1,92em isso passa da caixa da linha e o "g" de "registra" batia no texto
+   seguinte. O padding em `em` acompanha o corpo do titulo em qualquer viewport. */
+.h2--script { padding-bottom: .42em; }
+
 .script {
   font-family: var(--font-script);
   font-weight: 400;
-  font-size: 1.5em;
-  line-height: .82;
+  /* Escala calculada pela altura-x, nao no olho: a Yellowtail original tinha
+     altura-x 0,425 do corpo e rodava a 1,22em (= 0,52em de altura-x efetiva).
+     A Sacramento tem 0,270, entao precisa de 0,52 / 0,270 = 1,92em para
+     bater opticamente com a Poppins ao lado. */
+  font-size: 1.92em;
+  line-height: .68;
   letter-spacing: 0;
   color: var(--teal-600);
   padding-right: .06em;
@@ -361,7 +370,7 @@ ul, ol { list-style: none; padding: 0; }
   position: absolute; bottom: .55rem; left: 0; right: 0;
   text-align: center;
   font-family: var(--font-script);
-  font-size: 1.35rem;
+  font-size: 1.73rem;
   color: var(--teal-800);
 }
 .polaroid { position: relative; }
