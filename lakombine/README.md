@@ -10,25 +10,13 @@ totem moderno para casamentos, festas e eventos corporativos.
 
 ## O que precisa ser trocado antes de divulgar
 
-Três coisas ficaram com valor provisório. Todas estão marcadas com `TROCAR` no código.
+O WhatsApp já está aplicado. Faltam as fotos e a revisão dos depoimentos/afirmações.
 
-### 1. Número do WhatsApp — **obrigatório**
+### 1. ~~Número do WhatsApp~~ ✅ feito
 
-O placeholder é `5511900000000` (formato: `55` + DDD + número, sem espaços ou traços).
-Aparece em **2 links** no `index.html`:
-
-```bash
-# troque em todos de uma vez:
-sed -i 's/5511900000000/55SEUNUMERO/g' index.html
-```
-
-| Onde | Trecho |
-|---|---|
-| Botão principal do CTA final | `href="https://wa.me/5511900000000?text=..."` |
-| Rodapé → Contato | `href="https://wa.me/5511900000000"` |
-
-Os demais botões (“Solicitar orçamento”, “Quero a Kombi…”) apontam para `#contato`,
-então rolam até o CTA e usam o mesmo link — não precisa mexer neles.
+O número real (`+55 11 91526-9335` → `5511915269335`) já está nos 3 lugares:
+os dois links `wa.me` e o campo `telephone` do JSON-LD. Se mudar de número,
+troque nos três — um `sed 's/5511915269335/NOVO/g' index.html` resolve.
 
 ### 2. Fotos
 
