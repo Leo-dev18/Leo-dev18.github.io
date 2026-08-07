@@ -423,6 +423,21 @@ ul, ol { list-style: none; padding: 0; }
 .ph--sm::after { display: none; }
 .ph--tall { aspect-ratio: 4 / 5; }
 
+/* ---------- Fotos ---------- */
+/* Os width/height no HTML evitam salto de layout; o aspect-ratio garante o
+   enquadramento mesmo se alguém trocar a foto por uma de proporção diferente. */
+.polaroid img, .strip img, .frame img, .card__media img, .gallery__item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.polaroid img { aspect-ratio: 4 / 3; }
+.strip img { aspect-ratio: 4 / 3.2; }
+.frame img { aspect-ratio: 4 / 5; }
+.gallery__item img { aspect-ratio: 4 / 3; }
+.gallery__item--tall img { aspect-ratio: 3 / 4; }
+
 /* --- marquee retrô --- */
 .marquee {
   position: relative;
@@ -554,7 +569,8 @@ ul, ol { list-style: none; padding: 0; }
   padding: .4rem .8rem; border-radius: var(--radius-pill);
 }
 .card__media { background: var(--teal-50); }
-.card__media .ph { aspect-ratio: 16 / 11; border-radius: 0; }
+.card__media .ph,
+.card__media img { aspect-ratio: 4 / 5; border-radius: 0; }
 .card__body { padding: 1.6rem 1.5rem 1.7rem; display: flex; flex-direction: column; flex: 1; gap: .9rem; }
 .card__body h3 {
   font-family: var(--font-display); font-weight: 700;
@@ -620,6 +636,9 @@ ul, ol { list-style: none; padding: 0; }
    ========================================================= */
 .gallery {
   display: flex;
+  /* sem isto os itens esticam até a altura do mais alto e sobra
+     uma faixa branca embaixo das fotos deitadas */
+  align-items: center;
   gap: 1rem;
   overflow-x: auto;
   padding: .5rem clamp(1.25rem, 4vw, 4rem) 1.5rem;

@@ -10,7 +10,7 @@ totem moderno para casamentos, festas e eventos corporativos.
 
 ## O que precisa ser trocado antes de divulgar
 
-O WhatsApp já está aplicado. Faltam as fotos e a revisão dos depoimentos/afirmações.
+WhatsApp e fotos já aplicados. Falta a revisão dos depoimentos e das afirmações.
 
 ### 1. ~~Número do WhatsApp~~ ✅ feito
 
@@ -18,38 +18,33 @@ O número real (`+55 11 91526-9335` → `5511915269335`) já está nos 3 lugares
 os dois links `wa.me` e o campo `telephone` do JSON-LD. Se mudar de número,
 troque nos três — um `sed 's/5511915269335/NOVO/g' index.html` resolve.
 
-### 2. Fotos
+### 2. ~~Fotos~~ ✅ feito (com ressalvas)
 
-Todo espaço de imagem é um `<div class="ph" data-slot="assets/nome.jpg">`.
-O atributo `data-slot` diz **qual arquivo aquele espaço espera**. Para publicar uma foto real,
-troque a `div` inteira por uma `img`:
+As 16 imagens do site vêm de 7 fotos originais, recortadas para cada proporção.
+Todas têm `alt` descritivo, `width`/`height` (evita salto de layout) e `loading="lazy"`
+fora do topo. Total: ~1,5 MB.
 
-```html
-<!-- antes -->
-<div class="ph" data-slot="assets/exp-kombi.jpg" data-label="Kombi Retrô"></div>
+| Original | Onde aparece |
+|---|---|
+| Noivos + Kombi | topo, seção "Quem somos", galeria |
+| Kombi montada no gramado | card Kombi Retrô, galeria |
+| Totem Retrô | topo, card Totem Retrô, galeria |
+| Totem Moderno | card Totem Moderno, galeria |
+| Pai e filha / casal com props / casal | tirinha do topo, galeria |
 
-<!-- depois -->
-<img src="assets/exp-kombi.jpg" alt="Kombi retrô montada em um casamento ao ar livre" loading="lazy" />
-```
+**O que ainda falta:**
 
-Arquivos esperados (coloque em `assets/`):
+1. **Interior da Kombi com a câmera montada.** O texto do site fala disso em três
+   lugares e não existe foto. É a maior lacuna que sobrou.
+2. **Kombi em mais eventos.** Hoje ela aparece 3× a partir de 2 fotos.
+3. **Tirinha impressa na mão de alguém** — prova concreta da entrega.
+4. **Livro de assinaturas.**
+5. A foto da Kombi no gramado é a de menor resolução (659 px de largura). Funciona,
+   mas fica levemente macia em tela retina. Se tiver o original maior, vale trocar.
 
-| Arquivo | Onde aparece | Proporção sugerida |
-|---|---|---|
-| `kombi-01.jpg` | polaroid do topo | 4:3 |
-| `tirinha-01..03.jpg` | tirinha de fotos do topo | 4:3 (recorte quadrado funciona) |
-| `totem-01.jpg` | segunda polaroid do topo | 4:3 |
-| `sobre-kombi.jpg` | seção “Quem somos” | 4:5 (retrato) |
-| `exp-kombi.jpg` | card Kombi Retrô | 16:11 |
-| `exp-totem-retro.jpg` | card Totem Retrô | 16:11 |
-| `exp-totem-moderno.jpg` | card Totem Moderno | 16:11 |
-| `galeria-01..08.jpg` | galeria horizontal | alterna 4:3 e 3:4 |
-
-Sempre preencha o `alt` descrevendo a cena — é o que leitores de tela leem e o que o
-Google usa para indexar as imagens.
-
-**Dica de peso:** exporte em no máximo ~1600px de largura e qualidade 80. Fotos direto
-do celular têm 4–8 MB e deixam o site lento no 4G dos convidados.
+Para trocar ou acrescentar: coloque o arquivo em `assets/` e ajuste o `src` da `<img>`
+correspondente. O `object-fit: cover` no CSS garante o enquadramento mesmo que a
+proporção da foto nova seja diferente.
 
 ### 3. Depoimentos
 

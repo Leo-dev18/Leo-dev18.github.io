@@ -174,22 +174,21 @@
       </ul>
     </div>
 
-    <!-- Placeholders de imagem: troque os src por fotos reais (ver README) -->
     <div class="hero__media" aria-hidden="false">
       <figure class="polaroid polaroid--a">
-        <div class="ph" data-slot="assets/kombi-01.jpg" data-label="Kombi retrô"></div>
+        <img src="assets/kombi-01.jpg" width="900" height="675" fetchpriority="high" alt="Noivos posando ao lado da Kombi retrô da La Kombine em um casamento ao ar livre" />
         <figcaption>a Kombi</figcaption>
       </figure>
 
       <figure class="strip">
-        <div class="ph ph--sm" data-slot="assets/tirinha-01.jpg"></div>
-        <div class="ph ph--sm" data-slot="assets/tirinha-02.jpg"></div>
-        <div class="ph ph--sm" data-slot="assets/tirinha-03.jpg"></div>
+        <img src="assets/tirinha-01.jpg" width="560" height="448" fetchpriority="high" alt="Pai e filha abraçados posando na cabine fotográfica da festa" />
+        <img src="assets/tirinha-02.jpg" width="560" height="448" fetchpriority="high" alt="Casal de convidados rindo com óculos de coração na cabine fotográfica" />
+        <img src="assets/tirinha-03.jpg" width="560" height="448" fetchpriority="high" alt="Casal posando para o totem fotográfico em frente ao painel de folhagem" />
         <figcaption>La Kombine</figcaption>
       </figure>
 
       <figure class="polaroid polaroid--b">
-        <div class="ph" data-slot="assets/totem-01.jpg" data-label="Totem retrô"></div>
+        <img src="assets/totem-01.jpg" width="900" height="675" fetchpriority="high" alt="Totem Retrô da La Kombine, em madeira e formato de câmera antiga, montado sobre tripé" />
         <figcaption>o totem</figcaption>
       </figure>
     </div>
@@ -220,7 +219,7 @@
   <div class="container about">
     <div class="about__media reveal">
       <div class="frame">
-        <div class="ph ph--tall" data-slot="assets/sobre-kombi.jpg" data-label="A Kombi por dentro"></div>
+        <img src="assets/sobre-kombi.jpg" width="900" height="1125" loading="lazy" alt="Noivos em frente à Kombi retrô decorada com flores, violão e tapete" />
       </div>
       <div class="badge-ring" aria-hidden="true">
         <svg viewBox="0 0 120 120">
@@ -279,7 +278,7 @@
       <article class="card reveal">
         <span class="card__tag">O carro-chefe</span>
         <div class="card__media">
-          <div class="ph" data-slot="assets/exp-kombi.jpg" data-label="Kombi Retrô"></div>
+          <img src="assets/exp-kombi.jpg" width="659" height="823" loading="lazy" alt="Kombi retrô da La Kombine montada no gramado, com violão, tapete e luzes, pronta para receber os convidados" />
         </div>
         <div class="card__body">
           <h3>Kombi Retrô</h3>
@@ -298,7 +297,7 @@
       <article class="card reveal">
         <span class="card__tag">Clássico</span>
         <div class="card__media">
-          <div class="ph" data-slot="assets/exp-totem-retro.jpg" data-label="Totem Retrô"></div>
+          <img src="assets/exp-totem-retro.jpg" width="760" height="950" loading="lazy" alt="Totem Retrô em madeira sobre tripé, com tela personalizada e impressora ao lado" />
         </div>
         <div class="card__body">
           <h3>Totem Retrô</h3>
@@ -317,7 +316,7 @@
       <article class="card reveal">
         <span class="card__tag">Versátil</span>
         <div class="card__media">
-          <div class="ph" data-slot="assets/exp-totem-moderno.jpg" data-label="Totem Moderno"></div>
+          <img src="assets/exp-totem-moderno.jpg" width="760" height="950" loading="lazy" alt="Totem Moderno branco com ring light e arte personalizada de aniversário, ao lado da mesa com a impressora" />
         </div>
         <div class="card__body">
           <h3>Totem Moderno</h3>
@@ -385,16 +384,14 @@
     </header>
   </div>
 
-  <!-- Placeholders: troque cada .ph por <img src="assets/galeria-XX.jpg" alt="..."> -->
   <div class="gallery" id="gallery" role="region" aria-label="Galeria de fotos">
-    <figure class="gallery__item"><div class="ph" data-slot="assets/galeria-01.jpg" data-label="Casamento"></div></figure>
-    <figure class="gallery__item gallery__item--tall"><div class="ph" data-slot="assets/galeria-02.jpg" data-label="Kombi na festa"></div></figure>
-    <figure class="gallery__item"><div class="ph" data-slot="assets/galeria-03.jpg" data-label="Props"></div></figure>
-    <figure class="gallery__item gallery__item--tall"><div class="ph" data-slot="assets/galeria-04.jpg" data-label="Tirinha"></div></figure>
-    <figure class="gallery__item"><div class="ph" data-slot="assets/galeria-05.jpg" data-label="Totem retrô"></div></figure>
-    <figure class="gallery__item gallery__item--tall"><div class="ph" data-slot="assets/galeria-06.jpg" data-label="Convidados"></div></figure>
-    <figure class="gallery__item"><div class="ph" data-slot="assets/galeria-07.jpg" data-label="Livro de assinaturas"></div></figure>
-    <figure class="gallery__item gallery__item--tall"><div class="ph" data-slot="assets/galeria-08.jpg" data-label="Festa infantil"></div></figure>
+    <figure class="gallery__item"><img src="assets/galeria-01.jpg" width="680" height="510" loading="lazy" alt="Convidados rindo com óculos de coração na cabine fotográfica" /></figure>
+    <figure class="gallery__item gallery__item--tall"><img src="assets/galeria-02.jpg" width="620" height="827" loading="lazy" alt="Noivos ao lado da Kombi retrô no dia do casamento" /></figure>
+    <figure class="gallery__item"><img src="assets/galeria-03.jpg" width="680" height="510" loading="lazy" alt="Pai e filha posando juntos na cabine fotográfica" /></figure>
+    <figure class="gallery__item gallery__item--tall"><img src="assets/galeria-04.jpg" width="620" height="827" loading="lazy" alt="Totem Moderno com arte personalizada para festa de aniversário" /></figure>
+    <figure class="gallery__item"><img src="assets/galeria-05.jpg" width="680" height="510" loading="lazy" alt="Casal de convidados posando no totem fotográfico" /></figure>
+    <figure class="gallery__item gallery__item--tall"><img src="assets/galeria-06.jpg" width="620" height="827" loading="lazy" alt="Kombi retrô montada ao ar livre para um evento" /></figure>
+    <figure class="gallery__item"><img src="assets/galeria-07.jpg" width="680" height="510" loading="lazy" alt="Totem Retrô montado em um salão de festas" /></figure>
   </div>
 
   <div class="container">
