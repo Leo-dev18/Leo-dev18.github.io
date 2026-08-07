@@ -73,6 +73,22 @@ converte muito mais. O bloco está marcado com um comentário `ATENÇÃO` no `in
 O mesmo vale para os números do hero (5,0 · 9 avaliações · 100% recomendam · Casamentos
 Awards 2026): confira se continuam corretos antes de publicar.
 
+### 4. Afirmações que precisam de confirmação sua
+
+Tudo abaixo veio do perfil público da marca, não de você. Confirme antes de divulgar:
+
+| Onde | Afirmação |
+|---|---|
+| Hero | 5,0 · 9 avaliações · 100% dos casais recomendam |
+| Depoimentos | Casamentos Awards 2026 |
+| FAQ | montagem em ~60 min · 3 a 6 h de duração · reservar com 3 meses |
+| FAQ | pagamento: transferência, PIX, cartão, parcelado |
+| FAQ | funciona ao ar livre |
+| Rodapé / FAQ | base em Guarulhos, atende a Grande São Paulo |
+
+O rodapé **não** exibe horário de atendimento — eu não tenho esse dado. Se quiser mostrar,
+há um comentário no `index.html` marcando o lugar.
+
 ---
 
 ## Estrutura
