@@ -51,7 +51,7 @@
 
   --font-display: 'Poppins', 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  --font-script: 'Yellowtail', 'Brush Script MT', 'Snell Roundhand', cursive;
+  --font-script: 'Great Vibes', 'Snell Roundhand', 'Brush Script MT', cursive;
 
   --nav-h: 74px;
   --container: 1200px;
@@ -116,8 +116,8 @@ ul, ol { list-style: none; padding: 0; }
 .script {
   font-family: var(--font-script);
   font-weight: 400;
-  font-size: 1.22em;
-  line-height: .9;
+  font-size: 1.5em;
+  line-height: .82;
   letter-spacing: 0;
   color: var(--teal-600);
   padding-right: .06em;
@@ -230,21 +230,11 @@ ul, ol { list-style: none; padding: 0; }
 
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
 .brand__mark {
-  width: 46px; height: 46px; border-radius: 50%;
+  width: 54px; height: 54px; border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(255,255,255,.6);
+  transition: transform .3s var(--ease);
 }
-.brand__text { display: flex; flex-direction: column; line-height: 1; }
-.brand__la {
-  font-family: var(--font-display); font-size: .68rem; font-weight: 500;
-  letter-spacing: .3em; text-transform: uppercase; color: var(--white);
-  transition: color .3s var(--ease);
-}
-.brand__kombine {
-  font-family: var(--font-script); font-size: 1.5rem; color: var(--white);
-  margin-top: -.1rem; transition: color .3s var(--ease);
-}
-.nav.is-stuck .brand__la { color: var(--teal-600); }
-.nav.is-stuck .brand__kombine { color: var(--teal-700); }
+.brand:hover .brand__mark { transform: scale(1.06); }
 
 .nav__links { display: flex; align-items: center; gap: 1.7rem; }
 .nav__links a {
@@ -371,7 +361,7 @@ ul, ol { list-style: none; padding: 0; }
   position: absolute; bottom: .55rem; left: 0; right: 0;
   text-align: center;
   font-family: var(--font-script);
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--teal-800);
 }
 .polaroid { position: relative; }
@@ -855,8 +845,6 @@ ul, ol { list-style: none; padding: 0; }
     text-align: center; margin-top: 1rem; border-bottom: 0 !important;
   }
   .nav.is-open { background: rgba(251,245,233,.96); backdrop-filter: blur(12px); }
-  .nav.is-open .brand__la { color: var(--teal-600); }
-  .nav.is-open .brand__kombine { color: var(--teal-700); }
   .nav__toggle { display: flex; }
 }
 

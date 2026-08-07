@@ -131,7 +131,7 @@ Auto-hospedada em `assets/fonts/` (SIL Open Font License). Nada é buscado no Go
 
 - **Poppins** — títulos e interface
 - **Inter** — texto corrido
-- **Yellowtail** — os detalhes em manuscrito, ecoando o “Kombine” da logo
+- **Great Vibes** — os detalhes em manuscrito das seções
 
 ## Acessibilidade
 
