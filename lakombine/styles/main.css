@@ -115,8 +115,9 @@ ul, ol { list-style: none; padding: 0; }
 
 /* A Sacramento desce 0,53em abaixo da linha de base (a Yellowtail descia 0,30em).
    A 1,92em isso passa da caixa da linha e o "g" de "registra" batia no texto
-   seguinte. O padding em `em` acompanha o corpo do titulo em qualquer viewport. */
-.h2--script { padding-bottom: .42em; }
+   seguinte. O padding em `em` acompanha o corpo do titulo em qualquer viewport.
+   Vale para qualquer titulo que contenha .script, inclusive o h1 do topo. */
+.has-script { padding-bottom: .42em; }
 
 .script {
   font-family: var(--font-script);
@@ -322,6 +323,8 @@ ul, ol { list-style: none; padding: 0; }
 }
 .hero__lead {
   margin-top: 1.5rem;
+  display: grid;
+  gap: .85rem;
   font-size: clamp(1rem, .95rem + .3vw, 1.15rem);
   color: rgba(255,255,255,.96);
   max-width: 52ch;
