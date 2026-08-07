@@ -183,22 +183,34 @@ deste repositório é o que informa isso ao GitHub Pages.
 
 ### DNS no Registro.br
 
-No painel do Registro.br → **Editar zona DNS**:
+No painel do Registro.br → **Configurar endereçamento** → **Modo avançado**.
 
-| Tipo | Nome | Valor |
+> O painel do Registro.br **não aceita `@`** nem campo vazio: o campo NOME leva o nome
+> completo, como nos exemplos da própria tela (`meudominio.com.br A 200.160.10.251`).
+> E o CNAME vai **sem ponto final**.
+
+| TIPO | NOME | DADOS |
 |---|---|---|
-| A | `@` | `185.199.108.153` |
-| A | `@` | `185.199.109.153` |
-| A | `@` | `185.199.110.153` |
-| A | `@` | `185.199.111.153` |
-| AAAA | `@` | `2606:50c0:8000::153` |
-| AAAA | `@` | `2606:50c0:8001::153` |
-| AAAA | `@` | `2606:50c0:8002::153` |
-| AAAA | `@` | `2606:50c0:8003::153` |
-| CNAME | `www` | `leo-dev18.github.io.` |
+| A | `lakombine.com.br` | `185.199.108.153` |
+| A | `lakombine.com.br` | `185.199.109.153` |
+| A | `lakombine.com.br` | `185.199.110.153` |
+| A | `lakombine.com.br` | `185.199.111.153` |
+| AAAA | `lakombine.com.br` | `2606:50c0:8000::153` |
+| AAAA | `lakombine.com.br` | `2606:50c0:8001::153` |
+| AAAA | `lakombine.com.br` | `2606:50c0:8002::153` |
+| AAAA | `lakombine.com.br` | `2606:50c0:8003::153` |
+| CNAME | `www.lakombine.com.br` | `leo-dev18.github.io` |
+
+São 9 registros, dentro do limite de 40 do modo avançado. O `www` **precisa** ser CNAME
+com nome preenchido: o protocolo DNS proíbe CNAME na raiz, porque lá já existem SOA e NS.
+É exatamente por isso que o GitHub pede A/AAAA no apex e CNAME só no `www`.
 
 Configurando apex e `www` juntos, o GitHub cria o redirecionamento entre os dois
 automaticamente.
+
+**Ordem importa:** configure o DNS **antes** de ativar o Pages. Com o `CNAME` já no repo,
+o GitHub adota o domínio assim que o Pages sobe — e aí `leo-dev18.github.io/LaKombine/`
+passa a redirecionar para um domínio que ainda não resolve.
 
 ### No GitHub
 
